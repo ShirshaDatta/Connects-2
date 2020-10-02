@@ -44,4 +44,20 @@ router.post('/type', (req, res) => {
 })
 
 
+router.post('/enroll', (req, res) => {
+	
+	console.log("Enrolling user to course...")
+	
+	try{
+		userControls.courseRegister(req.body)
+        .then( (resp) => res.status(200).send(resp))
+        .catch( err => res.status(400).send(err))
+    }	
+	catch(e){
+            console.log(e);
+    }
+})
+
+
+
 module.exports = router

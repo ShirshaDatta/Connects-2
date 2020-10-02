@@ -39,3 +39,29 @@ module.exports.fetchUserType = (uid) => {
 		}
 	})
 }
+
+
+module.exports.addCourse = ({uid, course_id}) => {
+	return new Promise(async (resolve, reject) => {
+		try {
+
+			//{uid, courseName, category, duration, courseTime, days, courseFee }
+
+			await database
+				.collection("users")
+				.doc(uid)
+				.collection("courses")
+				.doc(course_id)
+				.set({
+					enrolledOn: new Date(),
+					active: true
+				})
+			
+			resolve()
+		}
+		catch (e) {
+			console.log(e);
+			reject();
+		}	
+	})
+}
