@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1089945402516",
+    "firebase_url": "https://connects2.firebaseio.com",
+    "project_id": "connects2",
+    "storage_bucket": "connects2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089945402516:android:ff736b52c3b127c8ec8881",
+        "android_client_info": {
+          "package_name": "com.hackAtMLH.Connects2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089945402516-2cvrl5v9k5q8m4m3hglbso67gkoer35g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ9_m8bHppQ5E-OEQh17uNeA5r-21Br64"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1089945402516-2cvrl5v9k5q8m4m3hglbso67gkoer35g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

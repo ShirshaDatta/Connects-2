@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.github.opybbt.flutter_statusbar_text_color" >
+
+    <uses-sdk android:minSdkVersion="16" />
+
+</manifest>

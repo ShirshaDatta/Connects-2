@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">1089945402516-2cvrl5v9k5q8m4m3hglbso67gkoer35g.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://connects2.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">1089945402516</string>
+    <string name="google_api_key" translatable="false">AIzaSyAJ9_m8bHppQ5E-OEQh17uNeA5r-21Br64</string>
+    <string name="google_app_id" translatable="false">1:1089945402516:android:ff736b52c3b127c8ec8881</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAJ9_m8bHppQ5E-OEQh17uNeA5r-21Br64</string>
+    <string name="google_storage_bucket" translatable="false">connects2.appspot.com</string>
+    <string name="project_id" translatable="false">connects2</string>
+</resources>
