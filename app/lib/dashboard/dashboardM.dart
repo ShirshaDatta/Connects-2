@@ -36,7 +36,7 @@ Widget getListView() {
         dense: true,
         leading: Text(listItems[index]),
         title: Text("Intoduction to Java"),
-        trailing: Icon(Icons.alarm_outlined),
+        trailing: Icon(Icons.alarm),
       ),
     );
   });
@@ -92,7 +92,7 @@ class _DashboardPageMState extends State<DashboardPageM> {
               actions: <Widget>[
                 IconButton(
                   icon: const Icon(
-                    Icons.add_alert_outlined,
+                    Icons.add_alert,
                     color: Colors.blue,
                   ),
                   onPressed: () {
@@ -101,66 +101,68 @@ class _DashboardPageMState extends State<DashboardPageM> {
                 ),
               ],
             ),
-            body: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  height: 12,
-                ),
-                //Weekly Progress Tab
-                Center(
-                  child: new Text(
-                    "Weekly Progress",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.underline,
-                      fontSize: 20,
-                      color: Colors.blue[600],
+            body: SingleChildScrollView(
+                          child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: 12,
+                  ),
+                  //Weekly Progress Tab
+                  Center(
+                    child: new Text(
+                      "Weekly Progress",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        decoration: TextDecoration.underline,
+                        fontSize: 20,
+                        color: Colors.blue[600],
+                      ),
                     ),
                   ),
-                ),
-                Center(child: chart()),
-                SizedBox(
-                  height: 5,
-                ),
-                Center(
-                  child: new Text(
-                    "Schedule",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.underline,
-                      fontSize: 20,
-                      color: Colors.blue[600],
+                  Center(child: chart()),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Center(
+                    child: new Text(
+                      "Schedule",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        decoration: TextDecoration.underline,
+                        fontSize: 20,
+                        color: Colors.blue[600],
+                      ),
                     ),
                   ),
-                ),
-                Container(height: 150, child: getListView()),
-                SizedBox(
-                  height: 1,
-                ),
-                Center(
-                  child: new Text(
-                    //Courses Enrolled
-                    "Laderboards",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.underline,
-                      fontSize: 20,
-                      color: Colors.blue[600],
+                  Container(height: 150, child: getListView()),
+                  SizedBox(
+                    height: 1,
+                  ),
+                  Center(
+                    child: new Text(
+                      //Courses Enrolled
+                      "Laderboards",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        decoration: TextDecoration.underline,
+                        fontSize: 20,
+                        color: Colors.blue[600],
+                      ),
                     ),
                   ),
-                ),
 
-                Container(
-                  width: MediaQuery.of(context).size.width,
-                  margin: EdgeInsets.all(10),
-                  child: Image.asset("assets/LeB.png"),
-                ),
-                SizedBox(
-                  height: 12,
-                ),
-              ],
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    margin: EdgeInsets.all(10),
+                    child: Image.asset("assets/LeB.png"),
+                  ),
+                  SizedBox(
+                    height: 12,
+                  ),
+                ],
+              ),
             ),
             backgroundColor: Colors.white,
             bottomNavigationBar: BottomNavigationBar(
@@ -178,7 +180,7 @@ class _DashboardPageMState extends State<DashboardPageM> {
                     icon: Icon(Icons.subscriptions),
                     title: Text("subscriptions")),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.add_box_rounded), title: Text("menu")),
+                    icon: Icon(Icons.add_box), title: Text("menu")),
                 BottomNavigationBarItem(
                     icon: Icon(Icons.account_circle), title: Text("acc")),
               ],

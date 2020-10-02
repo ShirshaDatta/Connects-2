@@ -3,6 +3,7 @@ import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import '../charts.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 //import 'charts.dart';
 import 'package:statusbar/statusbar.dart';
 
@@ -36,7 +37,7 @@ Widget getListView() {
         dense: true,
         leading: Text(listItems[index]),
         title: Text("Intoduction to Java"),
-        trailing: Icon(Icons.alarm_outlined),
+        trailing: Icon(Icons.alarm),
       ),
     );
   });
@@ -92,7 +93,7 @@ class _DashboardPageState extends State<DashboardPage> {
               actions: <Widget>[
                 IconButton(
                   icon: const Icon(
-                    Icons.add_alert_outlined,
+                    Icons.add_alert,
                     color: Colors.blue,
                   ),
                   onPressed: () {
@@ -210,7 +211,9 @@ class _DashboardPageState extends State<DashboardPage> {
                     icon: Icon(Icons.subscriptions),
                     title: Text("subscriptions")),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.menu_book_outlined), title: Text("menu")),
+                    //icon: Icon(Icons.menu_book_outlined), 
+                    icon: Icon(Icons.menu),
+                    title: Text("menu")),
                 BottomNavigationBarItem(
                     icon: Icon(Icons.account_circle), title: Text("acc")),
               ],

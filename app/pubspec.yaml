@@ -39,6 +39,7 @@ dependencies:
   toast: ^0.1.5
   modal_progress_hud: ^0.1.3
   carousel_slider: ^1.3.0
+  material_design_icons_flutter: ^4.0.5655
   agora_rtc_engine: 
   permission_handler:
 
