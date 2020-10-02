@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:Connects2/dashboard/dashboard.dart';
-import 'package:Connects2/courses/courseStudent.dart';
+import 'package:Connects2/coursesOverview/courseStudent.dart';
 
 class PaymentSuccess extends StatelessWidget {
   @override
