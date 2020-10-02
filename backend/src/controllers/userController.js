@@ -4,20 +4,21 @@ const chalk = require('chalk');
 
 // MODEL IMPORTS
 const userDB = require('../models/userData');
+const courseDB = require('../models/courseDB');
 
 // CREATE ACCOUNT 
 const registerUser = (user) => {
 	console.log(user)
 	return new Promise((resolve, reject) => {
 		console.log(chalk.yellow("Registering new user..."))
-		
+
 		// SAVING DETAILS TO DB
 		userDB.registerUser(user)
 			.then((resp) => {
 
 				// SUCCESS
 				console.log(chalk.green("CREATED NEW USER!"))
-				
+
 				resolve({
 					statusCode: 200,
 					payload: {
@@ -26,7 +27,7 @@ const registerUser = (user) => {
 					wasUserRegistered: false,
 					isRegSuccess: true,
 				})
-			
+
 			})
 			.catch((err) => {
 				console.log(err)
@@ -42,16 +43,52 @@ const registerUser = (user) => {
 	})
 }
 
-
+// FETCH THE USER TYPE
 const fetchUserType = (uid) => {
 	return new Promise((resolve, reject) => {
 		userDB.fetchUserType(uid)
-			.then((resp)=>{
+			.then((resp) => {
 				console.log("IS USER A MENTOR: " + resp)
 				resolve({
 					msg: "SUCCESSFULLY FETCHED STATUS",
 					data: {
 						mentor: resp
+					}
+				})
+			})
+	})
+}
+
+
+// REGISTER TO COURSE
+const courseRegister = (obj) => {
+	console.log(obj)
+	return new Promise((resolve, reject) => {
+		console.log(chalk.yellow("ADDING USER TO COURSE..."))
+
+		// SAVING DETAILS TO DB
+		userDB.addCourse(obj)
+			.then((resp) => {
+
+				courseDB.addUserDetailsToCourse(obj)
+					.then(() => {
+						// SUCCESS
+						console.log(chalk.green("ENROLLED USER TO COURSE"))
+
+						resolve({
+							statusCode: 200,
+							payload: {
+								msg: "ENROLLED USER TO COURSE!",
+							},
+						})
+					})
+			})
+			.catch((err) => {
+				console.log(err)
+				reject({
+					statusCode: 400,
+					payload: {
+						msg: "Server Side error contact support"
 					}
 				})
 			})
@@ -98,6 +135,7 @@ const getUserInfo = (uid) => {
 module.exports = {
 	registerUser,
 	fetchUserType,
+	courseRegister,
 	checkUserUid,
 	getUserInfo
 }

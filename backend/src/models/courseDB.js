@@ -23,3 +23,24 @@ module.exports.createCourse = (course) => {
 		}	
 	})
 }
+
+module.exports.addUserDetailsToCourse = ({course_id , uid}) => {
+	return new Promise(async (resolve, reject) => {
+		try {
+
+			await database
+				.collection("courses")
+				.doc(course_id)
+				.update(
+					{students: admin.firestore.FieldValue.arrayUnion(uid)}
+				);
+			
+			resolve()
+		}
+		catch (e) {
+			console.log(e);
+			reject();
+		}	
+	})
+}
+
