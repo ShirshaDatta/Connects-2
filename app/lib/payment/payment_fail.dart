@@ -19,7 +19,8 @@ class PaymentFail extends StatelessWidget {
               decoration: BoxDecoration(
                   image: DecorationImage(
                 image: AssetImage('assets/failed.png'),
-              )),
+              )
+              ),
             ),
             Text("Payment failed."),
             Row(

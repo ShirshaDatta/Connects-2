@@ -1,5 +1,9 @@
 //import 'package:Connects2/courses/courseMentor.dart';
 //import 'package:Connects2/courses/courseStudent.dart';
+//import 'dart:js';
+
+import 'package:Connects2/classJoin/classJoinMentor.dart';
+import 'package:Connects2/classJoin/classJoinStudent.dart';
 import 'package:Connects2/payment/payment_fail.dart';
 import 'package:Connects2/payment/payment_success.dart';
 import 'package:Connects2/payment/payments.dart';
@@ -19,7 +23,7 @@ void main() {
   Firebase.initializeApp();
 
   runApp(MaterialApp(
-    initialRoute: "payments",
+    initialRoute: "classjoinStudent",
     routes: {
       "home": (context) => HomePage(),
       "signup": (context) => Signuppage(),
@@ -28,6 +32,8 @@ void main() {
       "dashboardM": (context) => DashboardPageM(),
       "courseStudent": (context) => CoursePageStudent(),
       "courseMentor": (context) => CoursePageMentor(),
+      "classjoinMentor": (context) => ClassJoinMentor(),
+      "classjoinStudent": (context) => ClassJoinStudent(),
       "payments": (context) => PaymentPage(),
       "paymentfail": (context) => PaymentFail(),
       "paymentsuccess": (context) => PaymentSuccess(),

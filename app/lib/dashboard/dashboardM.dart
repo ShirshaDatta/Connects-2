@@ -102,7 +102,7 @@ class _DashboardPageMState extends State<DashboardPageM> {
               ],
             ),
             body: SingleChildScrollView(
-                          child: Column(
+                child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
