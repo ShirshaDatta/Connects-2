@@ -5,7 +5,7 @@ const chalk = require('chalk');
 // MODEL IMPORTS
 const courseDB = require('../models/courseDB');
 
-// CREATE ACCOUNT 
+// CREATE COURSE 
 const createCourse = (course) => {
 	console.log(course)
 	return new Promise((resolve, reject) => {
@@ -37,7 +37,6 @@ const createCourse = (course) => {
 			})
 	})
 }
-
 
 
 module.exports = {
