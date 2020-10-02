@@ -24,7 +24,7 @@ void main() {
   Firebase.initializeApp();
 
   runApp(MaterialApp(
-    initialRoute: "classjoinStudent",
+    initialRoute: "dashboard",
     routes: {
       "home": (context) => HomePage(),
       "signup": (context) => Signuppage(),
