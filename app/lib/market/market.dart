@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//import 'package:flutter/cupertino.dart';
 
 class market extends StatelessWidget {
   @override
@@ -25,7 +26,7 @@ class market extends StatelessWidget {
           actions: <Widget>[
             IconButton(
               icon: const Icon(
-                Icons.add_alert_outlined,
+                Icons.add_alert,
                 color: Colors.blue,
               ),
               onPressed: () {
@@ -52,7 +53,7 @@ class market extends StatelessWidget {
             BottomNavigationBarItem(
                 icon: Icon(Icons.subscriptions), title: Text("subscriptions")),
             BottomNavigationBarItem(
-                icon: Icon(Icons.menu_book_outlined), title: Text("menu")),
+                icon: Icon(Icons.add_box), title: Text("menu")),
             BottomNavigationBarItem(
                 icon: Icon(Icons.account_circle), title: Text("acc")),
           ],

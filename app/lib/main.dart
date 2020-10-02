@@ -1,8 +1,8 @@
 //import 'package:Connects2/courses/courseMentor.dart';
 //import 'package:Connects2/courses/courseStudent.dart';
-//import 'dart:js';
 
-import 'package:Connects2/Course%20Overveiw/coursee.dart';
+
+//import 'market/market.dart';
 import 'package:Connects2/classJoin/classJoinMentor.dart';
 import 'package:Connects2/classJoin/classJoinStudent.dart';
 import 'package:Connects2/payment/payment_fail.dart';
@@ -24,18 +24,18 @@ void main() {
   Firebase.initializeApp();
 
   runApp(MaterialApp(
-    initialRoute: "dashboard",
+    initialRoute: "courseOverview",
     routes: {
       "home": (context) => HomePage(),
       "signup": (context) => Signuppage(),
       "signin": (context) => SignInPage(),
       "dashboard": (context) => DashboardPage(),
       "dashboardM": (context) => DashboardPageM(),
-      "courseStudent": (context) => CoursePageStudent(),
-      "courseveiw": (context) => CourseView(),
+      "courseOverview": (context) => CoursePageStudent(),
       "courseMentor": (context) => CoursePageMentor(),
       "classjoinMentor": (context) => ClassJoinMentor(),
       "classjoinStudent": (context) => ClassJoinStudent(),
+     // "market": (context) => market(),
       "payments": (context) => PaymentPage(),
       "paymentfail": (context) => PaymentFail(),
       "paymentsuccess": (context) => PaymentSuccess(),
