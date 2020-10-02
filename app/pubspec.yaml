@@ -38,6 +38,7 @@ dependencies:
   page_transition: ^1.1.4
   toast: ^0.1.5
   modal_progress_hud: ^0.1.3
+  carousel_slider: ^1.3.0
   agora_rtc_engine: 
   permission_handler:
 

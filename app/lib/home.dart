@@ -1,5 +1,4 @@
 import 'package:statusbar/statusbar.dart';
-
 import 'signin.dart';
 import 'signup.dart';
 import 'package:flutter/material.dart';
@@ -11,8 +10,7 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> with TickerProviderStateMixin{
-
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   AnimationController _scaleController;
   AnimationController _scale2Controller;
   AnimationController _widthController;
@@ -26,70 +24,60 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin{
   bool hideIcon = false;
 
   @override
-  
   void initState() {
     // TODO: implement initState
     super.initState();
-     StatusBar.color(Color.fromRGBO(90, 200, 250, 1)
-    );
+    StatusBar.color(Color.fromRGBO(90, 200, 250, 1));
 
-    _scaleController = AnimationController(
-      vsync: this,
-      duration: Duration(milliseconds: 300)
-    );
+    _scaleController =
+        AnimationController(vsync: this, duration: Duration(milliseconds: 300));
 
-    _scaleAnimation = Tween<double>(
-      begin: 1.0, end: 0.8
-    ).animate(_scaleController)..addStatusListener((status) {
-      if (status == AnimationStatus.completed) {
-        _widthController.forward();
-      }
-    });
+    _scaleAnimation =
+        Tween<double>(begin: 1.0, end: 0.8).animate(_scaleController)
+          ..addStatusListener((status) {
+            if (status == AnimationStatus.completed) {
+              _widthController.forward();
+            }
+          });
 
-    _widthController = AnimationController(
-      vsync: this,
-      duration: Duration(milliseconds: 600)
-    );
+    _widthController =
+        AnimationController(vsync: this, duration: Duration(milliseconds: 600));
 
-    _widthAnimation = Tween<double>(
-      begin: 80.0,
-      end: 300.0
-    ).animate(_widthController)..addStatusListener((status) {
-      if (status == AnimationStatus.completed) {
-        _positionController.forward();
-      }
-    });
+    _widthAnimation =
+        Tween<double>(begin: 80.0, end: 300.0).animate(_widthController)
+          ..addStatusListener((status) {
+            if (status == AnimationStatus.completed) {
+              _positionController.forward();
+            }
+          });
 
     _positionController = AnimationController(
-      vsync: this,
-      duration: Duration(milliseconds: 1000)
-    );
+        vsync: this, duration: Duration(milliseconds: 1000));
 
-    _positionAnimation = Tween<double>(
-      begin: 0.0,
-      end: 215.0
-    ).animate(_positionController)..addStatusListener((status) {
-      if (status == AnimationStatus.completed) {
-        setState(() {
-          hideIcon = true;
-        });
-        _scale2Controller.forward();
-      }
-    });
+    _positionAnimation =
+        Tween<double>(begin: 0.0, end: 215.0).animate(_positionController)
+          ..addStatusListener((status) {
+            if (status == AnimationStatus.completed) {
+              setState(() {
+                hideIcon = true;
+              });
+              _scale2Controller.forward();
+            }
+          });
 
-    _scale2Controller = AnimationController(
-      vsync: this,
-      duration: Duration(milliseconds: 300)
-    );
+    _scale2Controller =
+        AnimationController(vsync: this, duration: Duration(milliseconds: 300));
 
-    _scale2Animation = Tween<double>(
-      begin: 1.0,
-      end: 32.0
-    ).animate(_scale2Controller)..addStatusListener((status) {
-      if (status == AnimationStatus.completed) {
-        Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: Signuppage()));
-      }
-    });
+    _scale2Animation =
+        Tween<double>(begin: 1.0, end: 32.0).animate(_scale2Controller)
+          ..addStatusListener((status) {
+            if (status == AnimationStatus.completed) {
+              Navigator.push(
+                  context,
+                  PageTransition(
+                      type: PageTransitionType.fade, child: Signuppage()));
+            }
+          });
   }
 
   @override
@@ -105,44 +93,44 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin{
             Positioned(
               top: -50,
               left: 0,
-              child: FadeAnimation(1, Container(
-                width: width,
-                height: 400,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('assets/login.png'),
-                    fit: BoxFit.cover
-                  )
-                ),
-              )),
+              child: FadeAnimation(
+                  1,
+                  Container(
+                    width: width,
+                    height: 400,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/login.png'),
+                            fit: BoxFit.cover)),
+                  )),
             ),
             Positioned(
               top: -100,
               left: 0,
-              child: FadeAnimation(1.3, Container(
-                width: width,
-                height: 400,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('assets/login.png'),
-                    fit: BoxFit.cover
-                  )
-                ),
-              )),
+              child: FadeAnimation(
+                  1.3,
+                  Container(
+                    width: width,
+                    height: 400,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/login.png'),
+                            fit: BoxFit.cover)),
+                  )),
             ),
             Positioned(
               top: -150,
               left: 0,
-              child: FadeAnimation(1.6, Container(
-                width: width,
-                height: 400,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('assets/login.png'),
-                    fit: BoxFit.cover
-                  )
-                ),
-              )),
+              child: FadeAnimation(
+                  1.6,
+                  Container(
+                    width: width,
+                    height: 400,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/login.png'),
+                            fit: BoxFit.cover)),
+                  )),
             ),
             Container(
               padding: EdgeInsets.all(20.0),
@@ -150,62 +138,90 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin{
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  FadeAnimation(1, Text("Connects2", 
-                  style: TextStyle(color: Colors.white, fontSize: 50),)),
-                  SizedBox(height: 15,),
-                  FadeAnimation(1.3, Text("Lets connect to make the youth future ready.", 
-                  style: TextStyle(color: Colors.blue.withOpacity(.7), height: 1.4, fontSize: 20),)),
-                  SizedBox(height: 180,),
-                  FadeAnimation(1.6, AnimatedBuilder(
-                    animation: _scaleController,
-                    builder: (context, child) => Transform.scale(
-                    scale: _scaleAnimation.value,
-                    child: Center(
-                      child: AnimatedBuilder(
-                        animation: _widthController,
-                        builder: (context, child) => Container(
-                          width: _widthAnimation.value,
-                          height: 80,
-                          padding: EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(50),
-                            color: Colors.blue.withOpacity(.4)
-                          ),
-                          child: InkWell(
-                            onTap: () {
-                              _scaleController.forward();
-                            },
-                            child: Stack(
-                              children: <Widget> [
-                                AnimatedBuilder(
-                                  animation: _positionController,
-                                  builder: (context, child) => Positioned(
-                                    left: _positionAnimation.value,
-                                    child: AnimatedBuilder(
-                                      animation: _scale2Controller,
-                                      builder: (context, child) => Transform.scale(
-                                        scale: _scale2Animation.value,
-                                        child: Container(
-                                          width: 60,
-                                          height: 60,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            color: Color.fromRGBO(100, 210, 255, 1)
+                  FadeAnimation(
+                      1,
+                      Text(
+                        "Connects2",
+                        style: TextStyle(color: Colors.white, fontSize: 50),
+                      )),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  FadeAnimation(
+                      1.3,
+                      Text(
+                        "Lets connect to make the youth future ready.",
+                        style: TextStyle(
+                            color: Colors.blue.withOpacity(.7),
+                            height: 1.4,
+                            fontSize: 20),
+                      )),
+                  SizedBox(
+                    height: 180,
+                  ),
+                  FadeAnimation(
+                      1.6,
+                      AnimatedBuilder(
+                        animation: _scaleController,
+                        builder: (context, child) => Transform.scale(
+                            scale: _scaleAnimation.value,
+                            child: Center(
+                              child: AnimatedBuilder(
+                                animation: _widthController,
+                                builder: (context, child) => Container(
+                                  width: _widthAnimation.value,
+                                  height: 80,
+                                  padding: EdgeInsets.all(10),
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(50),
+                                      color: Colors.blue.withOpacity(.4)),
+                                  child: InkWell(
+                                    onTap: () {
+                                      _scaleController.forward();
+                                    },
+                                    child: Stack(children: <Widget>[
+                                      AnimatedBuilder(
+                                        animation: _positionController,
+                                        builder: (context, child) => Positioned(
+                                          left: _positionAnimation.value,
+                                          child: AnimatedBuilder(
+                                            animation: _scale2Controller,
+                                            builder: (context, child) =>
+                                                Transform.scale(
+                                                    scale:
+                                                        _scale2Animation.value,
+                                                    child: Container(
+                                                      width: 60,
+                                                      height: 60,
+                                                      decoration: BoxDecoration(
+                                                          shape:
+                                                              BoxShape.circle,
+                                                          color: Color.fromRGBO(
+                                                              100,
+                                                              210,
+                                                              255,
+                                                              1)),
+                                                      child: hideIcon == false
+                                                          ? Icon(
+                                                              Icons
+                                                                  .arrow_forward,
+                                                              color:
+                                                                  Colors.white,
+                                                            )
+                                                          : Container(),
+                                                    )),
                                           ),
-                                          child: hideIcon == false ? Icon(Icons.arrow_forward, color: Colors.white,) : Container(),
-                                        )
+                                        ),
                                       ),
-                                    ),
+                                    ]),
                                   ),
                                 ),
-                              ]
-                            ),
-                          ),
-                        ),
-                      ),
-                    )),
-                  )),
-                  SizedBox(height: 60,),
+                              ),
+                            )),
+                      )),
+                  SizedBox(
+                    height: 60,
+                  ),
                 ],
               ),
             )
