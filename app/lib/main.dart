@@ -5,6 +5,7 @@ import 'package:Connects2/payment/payment_success.dart';
 import 'package:Connects2/payment/payments.dart';
 import 'package:Connects2/dashboard/dashboard.dart';
 import 'package:Connects2/dashboard/dashboardM.dart';
+import 'package:Connects2/Course Overveiw/coursee.dart';
 import 'home.dart';
 
 import 'signin.dart';
@@ -17,7 +18,7 @@ void main() {
   Firebase.initializeApp();
 
   runApp(MaterialApp(
-    initialRoute: "dashboardM",
+    initialRoute: "courseveiw",
     routes: {
       "home": (context) => HomePage(),
       "signup": (context) => Signuppage(),
@@ -25,6 +26,7 @@ void main() {
       "dashboard": (context) => DashboardPage(),
       "dashboardM": (context) => DashboardPageM(),
       "courseStudent": (context) => CoursePageStudent(),
+      "courseveiw": (context) => CourseView(),
       "courseMentor": (context) => CoursePageMentor(),
       "payments": (context) => PaymentPage(),
       "paymentfail": (context) => PaymentFail(),
