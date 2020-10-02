@@ -21,7 +21,7 @@ class _SignuppageState extends State<Signuppage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      //resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomPadding: false,
       backgroundColor: Color.fromRGBO(238, 250, 255, 1),
       body: Container(
         //color: Color.fromRGBO(238, 250, 255, 1),
