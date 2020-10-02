@@ -342,6 +342,7 @@ class _DashboardPageState extends State<DashboardPage> {
           ),
           backgroundColor: Colors.white,
           bottomNavigationBar: BottomNavigationBar(
+            backgroundColor: Colors.black,
             items: [
               BottomNavigationBarItem(icon: Icon(Icons.dashboard) ,
               title: Text("dashboard")),

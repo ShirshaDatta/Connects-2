@@ -1,4 +1,6 @@
 import 'package:Connects2/dashboard.dart';
+import 'package:Connects2/payment/payment_fail.dart';
+import 'package:Connects2/payment/payment_success.dart';
 import 'package:flutter/material.dart';
 import 'package:statusbar/statusbar.dart';
 
@@ -80,7 +82,7 @@ class _PaymentPageState extends State<PaymentPage> {
              SizedBox(
                width: 200,
                   child: FlatButton(onPressed: (){
-                    Navigator.pushNamed(context, "dashboard");
+                    Navigator.pushNamed(context, "paymentsuccess");
                   }, 
                   child: Text("Confirm"),
                   
@@ -88,7 +90,7 @@ class _PaymentPageState extends State<PaymentPage> {
                    ),
                 ),
                  FlatButton(onPressed: (){
-                   Navigator.pushNamed(context, "dashboard");
+                   Navigator.pushNamed(context, "paymentfail");
                    print('hello');
                    }, 
                    child: Text('Cancel Payment'),

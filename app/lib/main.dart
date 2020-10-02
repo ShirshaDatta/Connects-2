@@ -1,8 +1,8 @@
-
-//import 'dart:js';
-
-import 'package:Connects2/payments.dart';
-import 'course.dart';
+import 'package:Connects2/courses/courseMentor.dart';
+import 'package:Connects2/courses/courseStudent.dart';
+import 'package:Connects2/payment/payment_fail.dart';
+import 'package:Connects2/payment/payment_success.dart';
+import 'package:Connects2/payment/payments.dart';
 import 'dashboard.dart';
 import 'home.dart';
 import 'signin.dart';
@@ -16,14 +16,17 @@ void main() {
 
 
   runApp(MaterialApp(
-    initialRoute: "course",
+    initialRoute: "payments",
     routes: {
       "home" : (context) => HomePage(),
       "signup" : (context) => Signuppage(),
       "signin" : (context) => SignInPage(),
-      "dashboard" :(context) => DashboardPage(),
-      "course" :(context) => CoursePage(),
-      "payments" :(context) => PaymentPage(),
+      "dashboard" : (context) => DashboardPage(),
+      "courseStudent" : (context) => CoursePageStudent(),
+      "courseMentor" : (context) => CoursePageMentor(),
+      "payments" : (context) => PaymentPage(),
+      "paymentfail" : (context) => PaymentFail(),
+      "paymentsuccess" : (context) => PaymentSuccess(),
     },
     debugShowCheckedModeBanner: false,
     )
