@@ -62,7 +62,7 @@ router.post('/enroll', (req, res) => {
 	}
 })
 
-// FETCH MY COURSES
+// FETCH MY COURSES (MENTOR)
 router.post('/mentor/myCourses', (req, res) => {
 	try {
 		userControls.fetchMentorCourses(req.body.uid)
@@ -74,6 +74,17 @@ router.post('/mentor/myCourses', (req, res) => {
 	}
 })
 
+// FETCH MY COURSES (STUDENT)
+router.post('/student/myCourses', (req, res) => {
+	try {
+		userControls.fetchStudentCourses(req.body.uid)
+			.then((resp) => res.status(200).send(resp))
+			.catch(err => res.status(400).send(err))
+	}
+	catch (e) {
+		console.log(e);
+	}
+})
 
 
 module.exports = router

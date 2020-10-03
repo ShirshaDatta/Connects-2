@@ -87,3 +87,31 @@ module.exports.fetchMentorCourses = (uid) => {
 		}	
 	})
 }
+
+// FETCH COURSES OF STUDENT
+module.exports.fetchStudentCourses = (uid) => {
+	return new Promise(async (resolve, reject) => {
+		try {
+
+			let courses = await database
+				.collection("users")
+				.doc(uid)
+				.collection("courses")
+				.get()
+			
+			let courses_id = []
+
+			courses.forEach((course) => {
+				courses_id.push(course.id)
+			})
+			
+			console.log(courses_id)
+
+			resolve(courses_id)
+		}
+		catch (e) {
+			console.log(e);
+			reject();
+		}	
+	})
+}
