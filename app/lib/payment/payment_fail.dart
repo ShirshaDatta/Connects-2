@@ -39,7 +39,7 @@ class PaymentFail extends StatelessWidget {
                   width: 100,
                   child: FlatButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, "dashboard");
+                      Navigator.pushNamed(context, "m");
                     },
                     child: Text("Cancel"),
                     color: Color.fromRGBO(100, 210, 255, 1),

@@ -305,25 +305,6 @@ class _DashBoardExpandedPageState extends State<DashBoardExpandedPage> {
         ]),
       ),
       backgroundColor: Colors.white,
-      bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        backgroundColor: Colors.white70,
-        selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.grey[300],
-        items: [
-          BottomNavigationBarItem(
-              icon: Icon(Icons.dashboard), title: Text("Dashboard")
-              //backgroundColor: Colors.black
-              ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.subscriptions), title: Text("subscriptions")),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.add_box), title: Text("menu")),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle), title: Text("acc")),
-        ],
-      ),
     );
   }
 }

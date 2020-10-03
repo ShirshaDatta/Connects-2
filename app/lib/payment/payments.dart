@@ -49,7 +49,7 @@ class _PaymentPageState extends State<PaymentPage> {
             Row(
               children: <Widget>[
                 Container(
-                  width: 200,
+                  width: 195,
                   child: TextField(
                     decoration: InputDecoration(
                         border: InputBorder.none, hintText: "CVV"),
@@ -59,7 +59,7 @@ class _PaymentPageState extends State<PaymentPage> {
                   ),
                 ),
                 Container(
-                  width: 200,
+                  width: 195,
                   child: TextField(
                     decoration: InputDecoration(
                         border: InputBorder.none, hintText: "MM/YYYY"),

@@ -98,7 +98,7 @@ class _SignuppageState extends State<Signuppage> {
                       print(password);
                       print(user);
                       if (user.additionalUserInfo.isNewUser == true) {
-                        Navigator.pushNamed(context, "dashboard");
+                        Navigator.pushNamed(context, "m");
                       }
                     } catch (e) {
                       String error = e.toString();

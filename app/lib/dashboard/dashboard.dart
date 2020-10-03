@@ -70,156 +70,130 @@ class _DashboardPageState extends State<DashboardPage> {
 
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    return MaterialApp(
-      home: SafeArea(
-        child: Scaffold(
-            resizeToAvoidBottomPadding: false,
-            resizeToAvoidBottomInset: false,
-            appBar: AppBar(
-              backgroundColor: Colors.white70,
-              title: TextField(
-                autocorrect: true,
-                decoration: InputDecoration(
-                  isDense: true, // Added this
-                  contentPadding: EdgeInsets.all(8),
-                  hintText: 'Search courses',
-                  prefixIcon: Icon(Icons.search),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30),
-                    borderSide: BorderSide(color: Colors.blue, width: 1.5),
-                  ),
-                ),
-              ),
-              actions: <Widget>[
-                IconButton(
-                  icon: const Icon(
-                    Icons.add_alert,
-                    color: Colors.blue,
-                  ),
-                  onPressed: () {
-                    print("object");
-                  },
-                ),
-              ],
+    return Scaffold(
+      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
+      appBar: AppBar(
+        backgroundColor: Colors.white70,
+        title: TextField(
+          autocorrect: true,
+          decoration: InputDecoration(
+            isDense: true, // Added this
+            contentPadding: EdgeInsets.all(8),
+            hintText: 'Search courses',
+            prefixIcon: Icon(Icons.search),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(30),
+              borderSide: BorderSide(color: Colors.blue, width: 1.5),
             ),
-            body: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  height: 12,
-                ),
-                //Weekly Progress Tab
-                Center(
-                  child: new Text(
-                    "Weekly Progress",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.underline,
-                      fontSize: 20,
-                      color: Colors.blue[600],
-                    ),
-                  ),
-                ),
-                Center(child: chart()),
-                SizedBox(
-                  height: 5,
-                ),
-                Center(
-                  child: new Text(
-                    "Schedule",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.underline,
-                      fontSize: 20,
-                      color: Colors.blue[600],
-                    ),
-                  ),
-                ),
-                Container(height: 150, child: getListView()),
-                SizedBox(
-                  height: 5,
-                ),
-                Center(
-                  child: new Text(
-                    //Courses Enrolled
-                    "Courses Enrolled",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.underline,
-                      fontSize: 20,
-                      color: Colors.blue[600],
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                CarouselSlider(
-                  height: 200,
-                  initialPage: 0,
-                  enableInfiniteScroll: true,
-                  enlargeCenterPage: true,
-                  reverse: false,
-                  onPageChanged: (index) {
-                    setState(() {
-                      _current = index;
-                    });
-                  },
-                  items: imgList.map((imgURl) {
-                    return Builder(
-                      builder: (BuildContext context) {
-                        return Container(
-                          width: MediaQuery.of(context).size.width,
-                          //margin: EdgeInsets.symmetric(horizontal: 1.0),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(14)),
-                            color: Colors.white,
-                          ),
-                          child: InkWell(
-                            onTap: () {
-                              print("object");
-                            },
-                            child: Image.network(
-                              imgURl,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        );
-                      },
-                    );
-                  }).toList(),
-                ),
-                SizedBox(
-                  height: 12,
-                ),
-              ],
+          ),
+        ),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(
+              Icons.add_alert,
+              color: Colors.blue,
             ),
-            backgroundColor: Colors.white,
-            bottomNavigationBar: BottomNavigationBar(
-              showSelectedLabels: false,
-              showUnselectedLabels: false,
-              backgroundColor: Colors.white70,
-              selectedItemColor: Colors.blue,
-              unselectedItemColor: Colors.grey[300],
-              items: [
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.dashboard), title: Text("Dashboard")
-                    //backgroundColor: Colors.black
-                    ),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.subscriptions),
-                    title: Text("subscriptions")),
-                BottomNavigationBarItem(
-                    //icon: Icon(Icons.menu_book_outlined),
-                    icon: Icon(Icons.menu),
-                    title: Text("menu")),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.account_circle), title: Text("acc")),
-              ],
-            )),
+            onPressed: () {
+              print("object");
+            },
+          ),
+        ],
       ),
-      debugShowCheckedModeBanner: false,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(
+            height: 12,
+          ),
+          //Weekly Progress Tab
+          Center(
+            child: new Text(
+              "Weekly Progress",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                decoration: TextDecoration.underline,
+                fontSize: 20,
+                color: Colors.blue[600],
+              ),
+            ),
+          ),
+          Center(child: chart()),
+          SizedBox(
+            height: 5,
+          ),
+          Center(
+            child: new Text(
+              "Schedule",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                decoration: TextDecoration.underline,
+                fontSize: 20,
+                color: Colors.blue[600],
+              ),
+            ),
+          ),
+          Container(height: 150, child: getListView()),
+          SizedBox(
+            height: 5,
+          ),
+          Center(
+            child: new Text(
+              //Courses Enrolled
+              "Courses Enrolled",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                decoration: TextDecoration.underline,
+                fontSize: 20,
+                color: Colors.blue[600],
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          CarouselSlider(
+            height: 200,
+            initialPage: 0,
+            enableInfiniteScroll: true,
+            enlargeCenterPage: true,
+            reverse: false,
+            onPageChanged: (index) {
+              setState(() {
+                _current = index;
+              });
+            },
+            items: imgList.map((imgURl) {
+              return Builder(
+                builder: (BuildContext context) {
+                  return Container(
+                    width: MediaQuery.of(context).size.width,
+                    //margin: EdgeInsets.symmetric(horizontal: 1.0),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(14)),
+                      color: Colors.white,
+                    ),
+                    child: InkWell(
+                      onTap: () {
+                        print("object");
+                      },
+                      child: Image.network(
+                        imgURl,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  );
+                },
+              );
+            }).toList(),
+          ),
+          SizedBox(
+            height: 12,
+          ),
+        ],
+      ),
+      backgroundColor: Colors.white,
     );
   }
 }
