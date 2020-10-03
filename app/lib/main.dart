@@ -24,11 +24,7 @@ void main() {
   Firebase.initializeApp();
 
   runApp(MaterialApp(
-<<<<<<< HEAD
-    initialRoute: "home",
-=======
-    initialRoute: "dashboard",
->>>>>>> fe1464b192f19dbd105488739ec454428753d240
+    initialRoute: "market",
     routes: {
       "home": (context) => HomePage(),
       "signup": (context) => Signuppage(),

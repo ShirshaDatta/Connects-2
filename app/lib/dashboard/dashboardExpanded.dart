@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:outline_material_icons/outline_material_icons.dart';
 
 class DashBoardExpandedPage extends StatefulWidget {
   @override
@@ -6,6 +7,9 @@ class DashBoardExpandedPage extends StatefulWidget {
 }
 
 class _DashBoardExpandedPageState extends State<DashBoardExpandedPage> {
+  static const IconData sort_outlined = IconData(0xe436, fontFamily: 'MaterialIcons');
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,7 +84,7 @@ class _DashBoardExpandedPageState extends State<DashBoardExpandedPage> {
                         print("lets Sort");
                       },
                       child: Icon(
-                        Icons.sort_outlined,
+                        sort_outlined,
                         color: Colors.blue[200],
                       ),
                     ),
