@@ -1,6 +1,7 @@
 <h1>connects2</h1>
 ##**_Inspiration_**
 Our team has been heavily inspired by the trend **“Atma Nirbhar”** which means “self-sufficient”. That’s the reason why we came up with a start-up plan or in other words a community that will connect the enthusiastic school students to the college students with interest in certain domains (be it from basic coding to advanced concepts of IoT, ML, and AI). As a result, it will not only help the one learning but also the one teaching. It will give a cutting edge to the school students over the others. Not only this, the college students, who are in their final years and struggling hard to get placed, this will be a sigh of relief for them as they have a source of income.
+
 ##**_Design and usability:_**
       I.We have kept SHNEIDERMAN’S 8 GOLDEN RULES in mind while designing our app:
 1. Strive for consistency 
