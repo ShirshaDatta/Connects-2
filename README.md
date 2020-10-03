@@ -1,8 +1,8 @@
 <h1>connects2</h1>
-##**_Inspiration_**
+## **_Inspiration_**
 Our team has been heavily inspired by the trend **“Atma Nirbhar”** which means “self-sufficient”. That’s the reason why we came up with a start-up plan or in other words a community that will connect the enthusiastic school students to the college students with interest in certain domains (be it from basic coding to advanced concepts of IoT, ML, and AI). As a result, it will not only help the one learning but also the one teaching. It will give a cutting edge to the school students over the others. Not only this, the college students, who are in their final years and struggling hard to get placed, this will be a sigh of relief for them as they have a source of income.
 
-##**_Design and usability:_**
+## **_Design and usability:_**
       I.We have kept SHNEIDERMAN’S 8 GOLDEN RULES in mind while designing our app:
 1. Strive for consistency 
 2. Cater to Universal Usability (Enable frequent users to use shortcuts) 
@@ -14,12 +14,12 @@ Our team has been heavily inspired by the trend **“Atma Nirbhar”** which mea
 8. Reduce short-term memory load<br>
         II.Not only this we have used the KLM model. The KLM is a practical design tool that can capture and calculate the physical actions a user will have to carry out to complete specific tasks.  The KLM can be used to determine the most efficient method and its suitability for specific contexts<br>
 
-##**_Future Possibility:_**
+## **_Future Possibility:_**
 1. Firstly we will start with our own college. But if we succeed in the future, we will extend this concept and also pursue it with other schools and colleges like SRM, Manipal, etc. These colleges are even more crowded than VIT. This can be applied not only in colleges but in large societies where hundreds of people are victims of the recession. Getting a decent job is always a concern in such communities. Therefore, the best way to do this is to use the app.
 2. After the success of the app in our business incubation cell we may go large scale where we may enable incentives to our employees with good office space in our IT hub in Bangalore.
 3. Now we are mainly going for basic languages like c++ or java. Later we may add more courses that teach the subject more in-depth. 
 
-##**_Solution of the problem:_**
+## **_Solution of the problem:_**
 1. We connect with freshers who to needful students who want to learn new skills.
 2. Creating a virtual classroom experience.
 3. Devising a curriculum that contains well-defined course material.
@@ -27,11 +27,11 @@ Our team has been heavily inspired by the trend **“Atma Nirbhar”** which mea
 5. Live doubt clearing sessions.
 
 
-##**_Originality:_**
+## **_Originality:_**
 This is the first app which provides both live classes and recorded lecture so that they can learn in their own pace at a relatively lower amount. This amount is afforded by students from any classes of society. We will also strictly follow ICSE or any State board syllabus so that it can help students to cope up with their ever piling school homework.
 
 
-##**_How we made:_**
+## **_How we made:_**
 
 1. Conduct user research and conducted user interviews.<br>
 
@@ -45,7 +45,7 @@ This is the first app which provides both live classes and recorded lecture so t
 
 6. The backend is built in Node.js using firestore as the database and firebase authentication for handling the authentication of users. The service is deployed to the google app engine and CI/CD pipeline for the backend is supported by Cloud build. Postman is used for internal API documentation and testing of the routes.
 
-##**_Tools and Technologies:_**
+## **_Tools and Technologies:_**
 
 1.Figma
 
@@ -59,7 +59,7 @@ This is the first app which provides both live classes and recorded lecture so t
 
 6.Node.js
 
-##**_Business plan:_**
+## **_Business plan:_**
 
 
  <img src="https://github.com/aishikasaha/a/blob/main/Capture.JPG" alt="alt text" title="Title" />
@@ -69,7 +69,7 @@ This is the first app which provides both live classes and recorded lecture so t
 
 
 
-#**_Key Points:_**
+# **_Key Points:_**
 1.Student Mentors will be rated from time to time through feedback received from mentees as well as from assessments.
 2. Course Price will be set according to the ratings of mentors.
 3. Mentees get to choose their desired course and the mentor for that according to his comfort by choosing the appropriate time and price for the course.
@@ -83,14 +83,14 @@ This is the first app which provides both live classes and recorded lecture so t
 
 
 
-##**_Target audience:_**
+## **_Target audience:_**
 1.	**Unemployed section:** The percentage of freshers in the corporate world who has been a victim to recession during pandemic now can earn their daily bread and butter via uploading their videos. These videos will be in the form of courses where a learner might subscribe to them and directly pay on the website. Not only this if they want to learn any course, but they are also most welcome to do so.
 2.	**School-going students:** Highly enthusiastic and young programmers are our main audience. The app is mainly curated to curb their appetite for more in-depth knowledge about programming. We have also designed the app in such a way so that the slow learners in school can cope up with their curriculum. 
 3.	**College Students:** College Students who have difficulty in paying their college fees, can go for this program as mentees. In this way, the app aids college students in financial needs.
 
 
 
-#**_Financial Plan:_**
+# **_Financial Plan:_**
 
 **1. Sponsorships:**<br>
 _1.1 Government oriented:_<br>
@@ -107,11 +107,11 @@ We depicted that there is a good number of investors and key partners that we ha
 Crowdfunding is a way to raise money for an individual or organization by collecting donations through family, friends, friends of friends, strangers, businesses, and more. By using social media to spread awareness, people can reach more potential donors than traditional forms of fundraising. The best e-platform for crowdfunding is ketto.com for your needs. Compare the best online fundraising platform by fees, features, support, and more. IVYHACK is also a great stage to pitch our plan and raise money for our start-up.
 
 
-##**_Marketing Plan:_**
+## **_Marketing Plan:_**
 First and foremost, the key to marketing is to know our customers. Therefore, we have sent out some google forms to school students. After 24 hours this is the summary of all the feedbacks:
 
 
-##**_Competitor Analysis:_**
+## **_Competitor Analysis:_**
 
 The major competition is existing websites such as Udemy and Coursera. In research, we have found out that 
 1.	**Coursera:** We can avail to this platform, the disadvantage being that the cost to be very high (34- 70 dollars). It is impossible for a middle-class student from a developing country to pay such a high amount. That’s why our connects2 app is for rescue. The students can subscribe to our course at a much feasible amount (around 5-7 dollars). Not only this, the assignment questions on Coursera are generic resulting in answers getting availed on the internet easily. This will not happen in connects2 as the mentees are supposed to change questions weekly.
