@@ -61,11 +61,11 @@ class _DashboardPageState extends State<DashboardPage> {
 
   int _current = 0;
   List imgList = [
-    'https://images.unsplash.com/photo-1502117859338-fd9daa518a9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    'https://images.unsplash.com/photo-1554321586-92083ba0a115?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    'https://images.unsplash.com/photo-1536679545597-c2e5e1946495?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    'https://images.unsplash.com/photo-1543922596-b3bbaba80649?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    'https://images.unsplash.com/photo-1502943693086-33b5b1cfdf2f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80'
+    'https://11daksh11.github.io/Fluuter/folder/Java-Debugging-Tips-881x441.jpg',
+    'https://11daksh11.github.io/Fluuter/folder/bitcoin-price-prediciton-using-machine-learning.webp',
+    'https://11daksh11.github.io/Fluuter/folder/devOps.png',
+    'https://11daksh11.github.io/Fluuter/folder/docky.png',
+    'http://11daksh11.github.io/Fluuter/folder/download.png',
   ];
 
   Widget build(BuildContext context) {
@@ -211,7 +211,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     icon: Icon(Icons.subscriptions),
                     title: Text("subscriptions")),
                 BottomNavigationBarItem(
-                    //icon: Icon(Icons.menu_book_outlined), 
+                    //icon: Icon(Icons.menu_book_outlined),
                     icon: Icon(Icons.menu),
                     title: Text("menu")),
                 BottomNavigationBarItem(
