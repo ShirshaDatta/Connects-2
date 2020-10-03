@@ -13,6 +13,8 @@ const userRegister = require('../middlewares/userRegister');
 
 router.use(bodyParser.json());
 
+
+// SINGUP
 router.post('/signup', userRegister, (req, res) => {
 
 	console.log("Registering new user")
@@ -28,34 +30,48 @@ router.post('/signup', userRegister, (req, res) => {
 	}
 })
 
+
+// MENTOR OR NOT?
 router.post('/type', (req, res) => {
-	
+
 	console.log("Fetching user type...")
-	
-	try{
+
+	try {
 
 		userControls.fetchUserType(req.body.uid)
-        .then( (resp) => {res.setHeader('Access-Control-Allow-Origin', '*'); res.status(200).send(resp)})
-        .catch( err => res.status(400).send(err))
-    }	
-	catch(e){
-            console.log(e);
-    }
+			.then((resp) => { res.setHeader('Access-Control-Allow-Origin', '*'); res.status(200).send(resp) })
+			.catch(err => res.status(400).send(err))
+	}
+	catch (e) {
+		console.log(e);
+	}
 })
 
-
+// ENROLL INTO A COURSE
 router.post('/enroll', (req, res) => {
-	
+
 	console.log("Enrolling user to course...")
-	
-	try{
+
+	try {
 		userControls.courseRegister(req.body)
-        .then( (resp) => res.status(200).send(resp))
-        .catch( err => res.status(400).send(err))
-    }	
-	catch(e){
-            console.log(e);
-    }
+			.then((resp) => res.status(200).send(resp))
+			.catch(err => res.status(400).send(err))
+	}
+	catch (e) {
+		console.log(e);
+	}
+})
+
+// FETCH MY COURSES
+router.post('/mentor/myCourses', (req, res) => {
+	try {
+		userControls.fetchMentorCourses(req.body.uid)
+			.then((resp) => res.status(200).send(resp))
+			.catch(err => res.status(400).send(err))
+	}
+	catch (e) {
+		console.log(e);
+	}
 })
 
 

@@ -1,5 +1,7 @@
 const { admin, database } = require('../utils/firebase');
 
+
+// CREATE A USER
 module.exports.registerUser = ({ email, uid, name, username, mentor }) => {
 	return new Promise(async (resolve, reject) => {
 		try {
@@ -24,6 +26,7 @@ module.exports.registerUser = ({ email, uid, name, username, mentor }) => {
 	})
 }
 
+// FETCH USER TYPE
 module.exports.fetchUserType = (uid) => {
 	return new Promise(async (resolve, reject) => {
 		try {
@@ -40,7 +43,7 @@ module.exports.fetchUserType = (uid) => {
 	})
 }
 
-
+// ADD A COURSE
 module.exports.addCourse = ({uid, course_id}) => {
 	return new Promise(async (resolve, reject) => {
 		try {
@@ -58,6 +61,25 @@ module.exports.addCourse = ({uid, course_id}) => {
 				})
 			
 			resolve()
+		}
+		catch (e) {
+			console.log(e);
+			reject();
+		}	
+	})
+}
+
+// FETCH COURSES OF MENTOR
+module.exports.fetchMentorCourses = (uid) => {
+	return new Promise(async (resolve, reject) => {
+		try {
+
+			let courses = await database
+				.collection("courses")
+				.where("uid" ,'==' , uid)
+				.get()
+			
+			resolve(courses)
 		}
 		catch (e) {
 			console.log(e);
