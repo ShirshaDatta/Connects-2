@@ -32,4 +32,17 @@ router.post('/create', checkUserType, (req, res) => {
 })
 
 
+// FETCH ALL COURSES
+router.get('/fetch', (req, res) => {
+	try {
+		courseController.fetchAllCourses()
+			.then((resp) => res.status(200).send(resp))
+			.catch(err => res.status(400).send(err))
+	}
+	catch (e) {
+		console.log(e);
+	}
+})
+
+
 module.exports = router

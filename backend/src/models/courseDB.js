@@ -63,3 +63,27 @@ module.exports.fetchCourseDetails = (course_id) => {
 		}	
 	})
 }
+
+
+module.exports.fetchAllCourses = (course_id) => {
+	return new Promise(async (resolve, reject) => {
+		try {
+
+			let courses = await database
+				.collection("courses")
+				.get();
+
+			let courseData = [];
+			
+			courses.forEach((course) => {
+				courseData.push(course.data())
+			})
+			
+			resolve(courseData)
+		}
+		catch (e) {
+			console.log(e);
+			reject();
+		}	
+	})
+}
