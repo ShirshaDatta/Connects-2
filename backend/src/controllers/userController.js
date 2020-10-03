@@ -95,6 +95,90 @@ const courseRegister = (obj) => {
 	})
 }
 
+// FETCH MENTOR COURSES
+const fetchMentorCourses = (uid) => {
+
+	return new Promise((resolve, reject) => {
+		console.log(chalk.yellow("FETCHING MENTOR'S COURSES..."))
+
+		// FETCHING MENTOR COURSES
+		userDB.fetchMentorCourses(uid)
+			.then((courses) => {
+
+				let courseData = [];
+
+				courses.forEach((course) => {
+					courseData.push(course.data())
+				})
+				
+				// SUCCESS
+				console.log(chalk.green("FETCHED MENTOR COURSES"))
+
+				resolve({
+					statusCode: 200,
+					payload: {
+						msg: "FETCHED MENTOR COURSES!",
+						payload:{
+							courseData
+						}
+					},
+				})
+			})
+			.catch((err) => {
+				console.log(err)
+				reject({
+					statusCode: 400,
+					payload: {
+						msg: "Server Side error contact support"
+					}
+				})
+			})
+	})
+}
+
+// FETCH STUDENT COURSES
+const fetchStudentCourses = (uid) => {
+
+	return new Promise((resolve, reject) => {
+		console.log(chalk.yellow("FETCHING STUDENT'S COURSES..."))
+
+		// FETCHING STUDENT COURSES
+		userDB.fetchStudentCourses(uid)
+			.then(async(courses_id) => {
+
+				let courses = [];
+
+				for(id of courses_id) {
+					let course = await courseDB.fetchCourseDetails(id);
+					courses.push(course);
+				}
+				
+				// SUCCESS
+				console.log(chalk.green("FETCHED STUDENT COURSES"))
+
+				resolve({
+					statusCode: 200,
+					payload: {
+						msg: "FETCHED STUDENT COURSES!",
+						payload:{
+							courses
+						}
+					},
+				})
+			})
+			.catch((err) => {
+				console.log(err)
+				reject({
+					statusCode: 400,
+					payload: {
+						msg: "Server Side error contact support"
+					}
+				})
+			})
+	})
+}
+
+
 // CHECK IF THE USER UID IS VALID
 const checkUserUid = (uid) => {
 	return new Promise((resolve, reject) => {
@@ -136,6 +220,8 @@ module.exports = {
 	registerUser,
 	fetchUserType,
 	courseRegister,
+	fetchMentorCourses,
+	fetchStudentCourses,
 	checkUserUid,
 	getUserInfo
 }
