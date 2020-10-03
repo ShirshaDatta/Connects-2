@@ -97,11 +97,11 @@ The Indian government has introduced over 50+ start-up schemes in the past few y
 _1.2. On surveying:_<br>
 We depicted that there is a good number of investors and key partners that we have to support our project and also funding requirements can be fulfilled from that.<br>
   	**2. Bank Loans:**
-<img src="https://drive.google.com/drive/folders/1I9AiASDKtW19m50pLwWBbISAoV_AbHv4" alt="alt text" title="Title" />
-![Alt text](https://github.com/aishikasaha/a/blob/main/Capture.JPG)
-      <img src="https://github.com/aishikasaha/image-classification-on-MNIST/blob/master/images/index.png" alt="index.png">
-![Alt text]("https://github.com/aishikasaha/a/blob/main/Capture.JPG")
-For more details on how to get loans for start-ups visit:[link]( https://indianmoney.com/articles/government-loan-for-business-startups-in-india)<br>
+<img src="https://github.com/aishikasaha/a/blob/main/pic1.jpeg" alt="alt text" title="Title" />
+<img src="https://github.com/aishikasaha/a/blob/main/pic2.jpeg" alt="alt text" title="Title" />
+
+
+**For more details on how to get loans for start-ups visit:[link]( https://indianmoney.com/articles/government-loan-for-business-startups-in-india)<br>
         **3.CROWDFUNDING and EVENTS:** 
 Crowdfunding is a way to raise money for an individual or organization by collecting donations through family, friends, friends of friends, strangers, businesses, and more. By using social media to spread awareness, people can reach more potential donors than traditional forms of fundraising. The best e-platform for crowdfunding is ketto.com for your needs. Compare the best online fundraising platform by fees, features, support, and more. IVYHACK is also a great stage to pitch our plan and raise money for our start-up.
 
