@@ -16,10 +16,9 @@
 ## Introduction
 
 <p>
-Depression is a common illness worldwide with more than 264 million effected. Surprisingly, roughly 800000 commit suicide each year due to depression. Team Echo presents you the CBT solution to help individuals recover from depression and track their growth in realtime. Our team have researched a lot and come up with features that are a key for dealing with depression. Apart from this we also let the user track his/her overall growth. The app helps its users become aware of inaccurate or negative thinking so you can view challenging situations better and respond to them more effectively. Our app also provides the user with a way to track what activities affect his daily mood so  that he/she can promote those activities which are beneficial for them.
+Our team has been heavily inspired by the trend <b>"Atma Nirbhar"</b> which means “self-sufficient”. That’s the reason why we came up with a start-up plan or in other words a community that will connect the enthusiastic school students to the college students with interest in certain domains (be it from basic coding to advanced concepts of IoT, ML, and AI). As a result, it will not only help the one learning but also the one teaching. It will give a cutting edge to the school students over the others. Not only this, the college students, who are in their final years and struggling hard to get placed, this will be a sigh of relief for them as they have a source of income.
 <div align="center">
 
-### Lets Fight Depression Together
 
 </div>
 </p>
@@ -31,7 +30,7 @@ Depression is a common illness worldwide with more than 264 million effected. Su
 
 <div align="center">
 
-<img src="echo.png" alt="Echo System Architecture" />
+<img src="readme_assets/platform.png" alt="Echo System Architecture" />
 
 </div>
 
@@ -42,7 +41,8 @@ Technologies used:
 4. Google OAuth
 5. Firestore
 6. Cloud build
-7. Obviously, GitHub
+7. Google App Engine
+8. Obviously, GitHub
 
 <br />
 
@@ -59,12 +59,12 @@ Technologies used:
 <br />
 
 ## Having Issues
-This project uses [GitHub Issues](https://github.com/sarthakpranesh/Echo_CBT_Server/issues) for tracking bugs and feature requests, so feel free to open one if you find any :)
+This project uses [GitHub Issues](https://github.com/ShirshaDatta/Connects-2/issues) for tracking bugs and feature requests, so feel free to open one if you find any :)
 
 <br />
 
 <div align="center">
 
-##### Made with ❤️ by Team Echo
+##### Made with ❤️ by Team Connects-2
 
 </div>
