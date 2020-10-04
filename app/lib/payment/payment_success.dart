@@ -21,14 +21,23 @@ class PaymentSuccess extends StatelessWidget {
               child: Container(
                   padding: EdgeInsets.all(50),
                   child: Text(
-                      "Thank you. Payment request processed successfully"))),
+                      "Thank you. Payment request processed successfully",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                      ),)
+                      )
+                      ),
           SizedBox(
-            width: 100,
+            width: 200,
             child: FlatButton(
               onPressed: () {
-                Navigator.pushNamed(context, "courseStudent");
+                Navigator.pushNamed(context, "m");
               },
-              child: Text("Cancel"),
+              child: Text("Back to Dashboard",
+              style: TextStyle(
+                fontSize: 15,
+              ),),
               color: Color.fromRGBO(100, 210, 255, 1),
             ),
           )

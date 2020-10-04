@@ -19,33 +19,43 @@ class PaymentFail extends StatelessWidget {
               decoration: BoxDecoration(
                   image: DecorationImage(
                 image: AssetImage('assets/failed.png'),
-              )),
+              )
+              ),
             ),
-            Text("Payment failed."),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                SizedBox(
-                  width: 100,
-                  child: FlatButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, "payments");
-                    },
-                    child: Text("Try again"),
-                    color: Color.fromRGBO(100, 210, 255, 1),
+            Container(
+              padding: EdgeInsets.all(20),
+              child: Text("Payment failed.",
+               style: TextStyle(fontSize: 18,
+               fontWeight: FontWeight.bold
+               ),)
+            ),
+            Container(
+              padding: EdgeInsets.all(50),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  SizedBox(
+                    width: 100,
+                    child: FlatButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, "payments");
+                      },
+                      child: Text("Try again"),
+                      color: Color.fromRGBO(100, 210, 255, 1),
+                    ),
                   ),
-                ),
-                SizedBox(
-                  width: 100,
-                  child: FlatButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, "dashboard");
-                    },
-                    child: Text("Cancel"),
-                    color: Color.fromRGBO(100, 210, 255, 1),
-                  ),
-                )
-              ],
+                  SizedBox(
+                    width: 100,
+                    child: FlatButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, "m");
+                      },
+                      child: Text("Cancel"),
+                      color: Color.fromRGBO(100, 210, 255, 1),
+                    ),
+                  )
+                ],
+              ),
             ),
           ],
         ),

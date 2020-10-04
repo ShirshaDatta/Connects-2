@@ -1,7 +1,11 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:statusbar/statusbar.dart';
 import 'package:toast/toast.dart';
+import 'package:http/http.dart'  as http;
+//import 'dart:convert' as convert;
 
 class Signuppage extends StatefulWidget {
   @override
@@ -19,9 +23,25 @@ class _SignuppageState extends State<Signuppage> {
     StatusBar.color(Color.fromRGBO(90, 200, 250, 1));
   }
 
+Future<http.Response> signup(uid) {
+    return http.post(
+      'https://connects2.uc.r.appspot.com/user/signup',
+      headers: <String, String>{
+        'Content-Type': 'application/json; charset=UTF-8',
+        'Authorization': 'Bearer ${uid}'
+      },
+      body: jsonEncode(<String, String>{
+         "email" : email,
+          "uid" : uid,
+          "name" : name,
+          "username": username,
+          "mentor" : "false",
+      }),
+    );
+  }
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      //resizeToAvoidBottomPadding: false,
       backgroundColor: Color.fromRGBO(238, 250, 255, 1),
       body: Container(
         //color: Color.fromRGBO(238, 250, 255, 1),
@@ -96,9 +116,11 @@ class _SignuppageState extends State<Signuppage> {
                           email: email, password: password);
                       print(email);
                       print(password);
-                      print(user);
+                      print(user.user.uid);
                       if (user.additionalUserInfo.isNewUser == true) {
-                        Navigator.pushNamed(context, "dashboard");
+                       var data =  await signup(user.user.uid);
+                       print(data);
+                        Navigator.pushNamed(context, "m");
                       }
                     } catch (e) {
                       String error = e.toString();
