@@ -5,6 +5,14 @@ const { admin, database } = require('../utils/firebase');
 module.exports.registerUser = ({ email, uid, name, username, mentor }) => {
 	return new Promise(async (resolve, reject) => {
 		try {
+
+			if(mentor === "false"){
+				mentor = false
+			}
+			else{
+				mentor = true
+			}
+
 			await database
 				.collection("users")
 				.doc(uid)
