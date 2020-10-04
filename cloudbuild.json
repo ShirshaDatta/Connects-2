@@ -1,0 +1,21 @@
+[11:48 PM, 10/4/2020] Yuvraj Singh: {
+	"steps": [
+		{
+			"name": "node",
+			"entrypoint": "npm",
+			"args": [
+				"install",
+				"./backend"
+			]
+		},
+		{
+			"name": "gcr.io/cloud-builders/gcloud",
+			"args": [
+				"app",
+				"deploy",
+				"backend/app.yaml"
+			],
+			"timeout": "2000s"
+		}
+	]
+}
