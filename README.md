@@ -4,7 +4,7 @@
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/ShirshaDatta/Connects-2)
 ![GitHub top language](https://img.shields.io/github/languages/top/ShirshaDatta/Connects-2)
-[![GitHub issues](https://img.shields.io/github/issues/ShirshaDatta/Connects-2)](https://github.com/sarthakpranesh/IC469_ECHO/issues)
+[![GitHub issues](https://img.shields.io/github/issues/ShirshaDatta/Connects-2)](https://github.com/ShirshaDatta/Connects-2/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/ShirshaDatta/Connects-2)](https://github.com/ShirshaDatta/Connects-2/pulls)
 [![GitHub stars](https://img.shields.io/github/stars/ShirshaDatta/Connects-2)](https://github.com/sarthakpranesh/ShirshaDatta/Connects-2)
 ![GitHub](https://img.shields.io/github/license/ShirshaDatta/Connects-2)
