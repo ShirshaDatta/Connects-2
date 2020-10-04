@@ -1,6 +1,6 @@
 <div align="center">
 
-# Echo CBT
+# CONNECT-2
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/ShirshaDatta/Connects-2)
 ![GitHub top language](https://img.shields.io/github/languages/top/ShirshaDatta/Connects-2)
