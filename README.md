@@ -65,6 +65,6 @@ This project uses [GitHub Issues](https://github.com/ShirshaDatta/Connects-2/iss
 
 <div align="center">
 
-##### Made with ❤️ by Team Connects-2
+##### Made with ❤️ by  Team Connects-2
 
 </div>
