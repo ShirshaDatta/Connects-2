@@ -47,11 +47,6 @@ Technologies used:
 <br />
 
 
-## APP Apk
-<a href ="https://drive.google.com/file/d/1kzG3SG3csttUHzs8Tva8yvrkS5bEEN9w/view?usp=sharing"> Link to download apk </a>
-
-
-
 ## Servers Online
 |Server   |Base Link   |
 |---|---|
